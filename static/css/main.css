@@ -1,0 +1,106 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    height: 50px;
+    color: white;
+}
+
+.dropdown-menu{
+    margin-left: -100px;
+}
+
+.dropdown-item a{
+    color: darkgray;
+    width: 100%;
+}
+
+.dropdown-item a:hover{
+    color: dimgray;
+    text-decoration: none;
+}
+
+footer {
+    height: 25px;
+    text-align: center;
+}
+
+.container-full {
+    width: 100%;
+    height: 100%;
+    margin: -75px 0 0 0;
+    padding: 75px 0 0 0;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bd-sidebar {
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+    border-right: 1px solid #ddd;
+}
+
+.nav-item a{
+    color: darkgray;
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+.nav-item a:hover{
+    color: dimgray;
+}
+
+.nav-item .active, .nav-item .active:hover{
+    font-weight: bold;
+    color: #1d2124;
+}
+
+.bd-sidebar .subitem{
+    padding-left: 20px;
+}
+
+.bd-sidebar .subitem a{
+    padding-top: 0;
+}
+
+.content{
+    padding: 25px 25px 25px 25px;
+    overflow-y: scroll;
+}
+
+.news{
+    background-color: #f7f7f9;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 25px;
+}
+
+.news-header{
+    width: 100%;
+}
+
+.news-header .date{
+    float: right;
+    font-size: medium;
+}
+
+.news-body{
+    float: none;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.news-footer{
+    padding-bottom: 20px;
+}
+
+.news-footer a {
+    float: right;
+    padding: 0 20px 20px 20px;
+}
