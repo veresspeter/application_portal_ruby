@@ -10,13 +10,47 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004132021) do
+ActiveRecord::Schema.define(version: 20171107020000) do
+
+  create_table "apps", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.integer "tenderid"
+    t.integer "userid"
+    t.string "filename"
+    t.integer "score"
+    t.integer "judgeid"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "news", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.string "article"
+    t.date "published"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tenders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "title"
+    t.string "article"
+    t.string "owner"
+    t.date "publishdate"
+    t.date "duedate"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email"
     t.string "password"
     t.string "name"
+    t.string "username"
     t.string "phone"
+    t.string "permission"
+    t.date "birthdate"
+    t.string "birthplace"
+    t.string "mothername"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

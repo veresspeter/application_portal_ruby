@@ -1,0 +1,12 @@
+ <div class="header navbar navbar-dark bg-primary  boxshadow">
+  <h4>Pályázati portál</h4>
+  <div class="dropdown">
+
+    <% if logged_in? %>
+        <%= render 'layouts/loggedin_menu' %>
+    <% else %>
+        <%= render 'layouts/loggedout_menu' %>
+    <% end %>
+
+  </div>
+</div>

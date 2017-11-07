@@ -1,0 +1,25 @@
+<button class="btn btn-outline-light btn-block dropdown-toggle" type="button" id="dropdownMenuButton"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  Bejelentkezés
+</button>
+<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+  <div class="dropdown-item disabled form-inline">
+
+    <%= form_tag("/login", method: "post") do %>
+
+        <p></p>
+        <%= text_field_tag(:username, "", class: "form-control", placeholder:"Felhasználónév") %>
+        <p></p>
+        <%= password_field_tag(:psw, "", class: "form-control", placeholder:"Jelszó") %>
+        <p></p>
+
+        <%= submit_tag("Bejelentkezés", class:"btn btn-primary") %>
+    <% end %>
+    <p></p>
+    <p>
+      <a href="/forgeted">Elfelejtett jelszó</a>
+      <br>
+      <a href="/register">Regisztráció</a>
+    </p>
+  </div>
+</div>

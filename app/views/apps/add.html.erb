@@ -1,0 +1,28 @@
+<div class="col-10 content">
+  <div class="col-sm-6 form-container">
+    <h4 class="title">Pályázat létrehozása</h4>
+
+    <%= form_tag("/apps/new", method: "post") do %>
+
+        <div class="form-group">
+          <%= label_tag(:name, "Pályázat neve", class: "col-5" ) %>
+          <%= text_field_tag(:name, "", class:"form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:duedate, "Beküldési határidő", class: "col-5" ) %>
+          <%= text_field_tag(:duedate, "", class:"form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= text_area_tag(:details, "", class:"form-control", placeholder: "Leírás") %>
+        </div>
+
+        <div style="height: 30px" ></div>
+
+
+        <%= submit_tag("Közzététel", class:"btn btn-block btn-outline-primary") %>
+    <% end %>
+
+  </div>
+</div>

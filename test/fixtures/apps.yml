@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  title: MyString
+  article: MyString
+  duedate: 2017-11-06
+  filename: MyString
+
+two:
+  id: 
+  title: MyString
+  article: MyString
+  duedate: 2017-11-06
+  filename: MyString

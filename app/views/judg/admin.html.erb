@@ -1,0 +1,34 @@
+<div class="col-10 content">
+  <h4 class="title">Felhasználók áttekintése</h4>
+  <table class="table table-center">
+    <thead>
+    <tr>
+      <th class="table-center">Teljes név</th>
+      <th class="table-center">Jogosultság</th>
+      <th class="table-center">Lehetőségek</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @users.each do |user| %>
+
+    <tr>
+      <td><%= user.name %></td>
+      <td><%= user.permission %></td>
+      <td>
+        <% if user.permission == "user" %>
+          <a class="btn btn-outline-primary" href="/judg/admin/add/<%= user.id %>">Legyen bíra</a>
+        <% end %>
+
+        <% if user.permission == "admin" %>
+            <a class="btn btn-outline-danger" href="/judg/admin/del/<%= user.id %>">Bíra törlése</a>
+        <% end %>
+      </td>
+    </tr>
+
+    <% end %>
+
+    </tbody>
+  </table>
+
+</div>

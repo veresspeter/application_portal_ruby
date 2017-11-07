@@ -1,0 +1,32 @@
+<div class="col-10 content">
+  <h4 class="title">Leadott pályázataim</h4>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Pályázat neve</th>
+      <th>Beküldött dokumentum</th>
+      <th>Határidő</th>
+      <th>Eredmény</th>
+      <th>Lehetőségek</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% @apps.each do |app| %>
+      <tr>
+        <td><%= app.tenderid %></td>
+        <td><a href="" ><%= app.filename %></a></td>
+        <td>?</td>
+        <td><%= app.score %></td>
+        <td>
+          <% if app.score==nil %>
+            <button type="button" class="btn btn-outline-warning upload" data-toggle="modal" data-target="#myModal">Módosít</button>
+            <button type="button" class="btn btn-outline-danger">Töröl</button>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+
+    </tbody>
+  </table>
+</div>

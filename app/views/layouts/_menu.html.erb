@@ -1,0 +1,43 @@
+
+
+<div class="col-2">
+  <nav class="bd-sidebar">
+    <ul class="nav flex-column">
+
+      <li class="nav-item">
+        <a class="nav-link <%= " active" if ( request.path == "/news" ) %>" href="/news">Hírek</a>
+      </li>
+
+      <% if admin? %>
+        <li class="nav-item subitem">
+          <a class="nav-link<%= " active" if ( request.path == "/news/add" ) %>" href="/news/add">Publikálás</a>
+        </li>
+      <% end %>
+
+      <li class="nav-item">
+        <a class="nav-link <%= " active" if ( request.path == "/apps" ) %>" href="/apps">Pályázatok</a>
+      </li>
+
+      <% if admin? %>
+        <li class="nav-item subitem">
+          <a class="nav-link <%= " active" if ( request.path == "/apps/add" ) %>" href="/apps/add">Kiírás</a>
+        </li>
+
+        <li class="nav-item subitem">
+          <a class="nav-link <%= " active" if ( request.path == "/apps/all" ) %>" href="/apps/all">Bírálás</a>
+        </li>
+      <% end %>
+
+      <li class="nav-item">
+        <a class="nav-link <%= " active" if ( request.path == "/judg" ) %>" href="/judg">Bírák</a>
+      </li>
+
+      <% if admin? %>
+        <li class="nav-item subitem">
+          <a class="nav-link <%= " active" if ( request.path == "/judg/admin" ) %>" href="/judg/admin">Jogkörök</a>
+        </li>
+      <% end %>
+
+    </ul>
+  </nav>
+</div>

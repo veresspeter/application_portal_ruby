@@ -1,0 +1,24 @@
+<div class="col-10 content">
+
+<% @news.each do |new| %>
+  <div class="news">
+    <div class="news-header">
+      <h4>
+        <span><%= new.title %></span>
+        <span class="date"><%= new.published %></span>
+      </h4>
+    </div>
+    <div class="news-body">
+      <p><%= new.article %></p>
+    </div>
+    <% if admin? %>
+      <div class="nav-item news-footer">
+        <a class="nav-link" href="/news/mod/<%= new.id %>">Szerkeszt</a>
+        <a class="nav-link" href="/news/del/<%= new.id %>">Töröl</a>
+      </div>
+    <% end %>
+  </div>
+
+<% end %>
+
+</div>

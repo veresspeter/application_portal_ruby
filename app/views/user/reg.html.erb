@@ -1,0 +1,78 @@
+<div class="col-10 content">
+  <div class="col-sm-6 form-container">
+    <h4 class="title">Regisztráció</h4>
+
+
+    <div style="height: 20px" ></div>
+
+    <%= form_tag("/register", method: "post") do %>
+        <div class="form-group">
+          <%= label_tag(:username, "Felhasználónév", class: "col-5" ) %>
+          <%= text_field_tag(:username, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:fullname, "Teljes név", class: "col-5" ) %>
+          <%= text_field_tag(:fullname, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:psw1, "Jelszó", class: "col-5" ) %>
+          <%= password_field_tag(:psw1, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:psw2, "Jelszó ismét", class: "col-5" ) %>
+          <%= password_field_tag(:psw2, "", class: "form-control col-7") %>
+        </div>
+
+
+        <div style="height: 30px" ></div>
+
+        <div class="form-group">
+          <%= label_tag(:birthdate, "Születési idő", class: "col-5" ) %>
+          <%= text_field_tag(:birthdate, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:birthplace, "Születési hely", class: "col-5" ) %>
+          <%= text_field_tag(:birthplace, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:mothername, "Anyja neve", class: "col-5" ) %>
+          <%= text_field_tag(:mothername , "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:address, "Állandó lakcím", class: "col-5" ) %>
+          <%= text_field_tag(:address, "", class: "form-control col-7") %>
+        </div>
+
+
+        <div style="height: 30px" ></div>
+
+
+        <div class="form-group">
+          <%= label_tag(:email, "E-mail cím", class: "col-5" ) %>
+          <%= text_field_tag(:email, "", class:"form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= label_tag(:phone, "Telefonszám", class: "col-5" ) %>
+          <%= text_field_tag(:phone, "", class:"form-control col-7") %>
+        </div>
+
+
+        <div class="form-check">
+          <label class="form-check-label">
+            <%= check_box_tag(:terms) %>
+            A felhasználási feltételekkel tisztában vagyok és elfogadom azokat.
+          </label>
+        </div>
+
+        <%= submit_tag("Regisztráció", class:"btn btn-block btn-outline-primary") %>
+    <% end %>
+
+  </div>
+</div>

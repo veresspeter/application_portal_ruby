@@ -1,0 +1,13 @@
+<div class="col-10 content">
+  <div class="col-sm-6 form-container">
+    <h4 class="title">Pályázatbírák</h4>
+    <div style="height: 20px"></div>
+    <div class="name">
+
+      <% @users.each do |user| %>
+        <h5><%= user.name %></h5>
+      <% end %>
+
+    </div>
+  </div>
+</div>

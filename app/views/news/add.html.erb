@@ -1,0 +1,22 @@
+<div class="col-10 content">
+  <div class="col-sm-6 form-container">
+    <h4 class="title">Hír létrehozása</h4>
+
+    <%= form_tag("/news/new", method: "post") do %>
+        <div class="form-group">
+          <%= label_tag(:name, "Hír címe", class: "col-5" ) %>
+          <%= password_field_tag(:name, "", class: "form-control col-7") %>
+        </div>
+
+        <div class="form-group">
+          <%= text_area_tag(:details, "", class:"form-control", placeholder:"Leírás") %>
+        </div>
+
+        <div style="height: 30px" ></div>
+
+
+        <%= submit_tag("Közzététel", class:"btn btn-block btn-outline-primary") %>
+    <% end %>
+
+  </div>
+</div>
